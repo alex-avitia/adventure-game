@@ -10,8 +10,8 @@ public class UI {
     JLabel titleNameLabel, hpLabel, hpNumberLabel, weaponLabel, weaponNameLabel;
     JButton startButton, choice1, choice2, choice3, choice4;
     JTextArea mainTextArea;
-    Font titleFont = new Font("Times New Roman", Font.PLAIN, 90);
-    Font normalFont = new Font("Times New Roman", Font.PLAIN, 26);
+    Font titleFont = new Font("Helvetica", Font.PLAIN, 90);
+    Font normalFont = new Font("Dialog", Font.PLAIN, 26);
 
     public void createUI(Game.ChoiceHandler cHandler) {
 
@@ -54,7 +54,7 @@ public class UI {
         mainTextArea = new JTextArea("This is the main text area.");
         mainTextArea.setBounds(100, 100, 600, 250);
         mainTextArea.setBackground(Color.black);
-        mainTextArea.setForeground(Color.black);
+        mainTextArea.setForeground(Color.white);
         mainTextArea.setFont(normalFont);
         mainTextArea.setLineWrap(true);
         mainTextArea.setWrapStyleWord(true);
@@ -69,7 +69,7 @@ public class UI {
 
         choice1 = new JButton("Choice 1");
         choice1.setBackground(Color.black);
-        choice1.setForeground(Color.white);
+        choice1.setForeground(Color.black);
         choice1.setFont(normalFont);
         choice1.setFocusPainted(false);
         choice1.addActionListener(cHandler);
@@ -77,7 +77,7 @@ public class UI {
         choiceButtonPanel.add(choice1);
         choice2 = new JButton("Choice 2");
         choice2.setBackground(Color.black);
-        choice2.setForeground(Color.white);
+        choice2.setForeground(Color.black);
         choice2.setFont(normalFont);
         choice2.setFocusPainted(false);
         choice2.addActionListener(cHandler);
@@ -85,7 +85,7 @@ public class UI {
         choiceButtonPanel.add(choice2);
         choice3 = new JButton("Choice 3");
         choice3.setBackground(Color.black);
-        choice3.setForeground(Color.white);
+        choice3.setForeground(Color.black);
         choice3.setFont(normalFont);
         choice3.setFocusPainted(false);
         choice3.addActionListener(cHandler);
@@ -93,7 +93,7 @@ public class UI {
         choiceButtonPanel.add(choice3);
         choice4 = new JButton("Choice 4");
         choice4.setBackground(Color.black);
-        choice4.setForeground(Color.white);
+        choice4.setForeground(Color.black);
         choice4.setFont(normalFont);
         choice4.setFocusPainted(false);
         choice4.addActionListener(cHandler);
@@ -103,10 +103,11 @@ public class UI {
         playerPanel = new JPanel();
         playerPanel.setBounds(100, 15, 600, 50);
         playerPanel.setBackground(Color.black);
+        playerPanel.setForeground(Color.white);
         playerPanel.setLayout(new GridLayout(1, 4));
         window.add(playerPanel);
 
-        hpLabel = new JLabel();
+        hpLabel = new JLabel("HP: ");
         hpLabel.setFont(normalFont);
         hpLabel.setForeground(Color.white);
         playerPanel.add(hpLabel);
@@ -114,7 +115,7 @@ public class UI {
         hpNumberLabel.setForeground(Color.white);
         hpNumberLabel.setFont(normalFont);
         playerPanel.add(hpNumberLabel);
-        weaponLabel = new JLabel();
+        weaponLabel = new JLabel("Weapon: ");
         weaponLabel.setForeground(Color.white);
         weaponLabel.setFont(normalFont);
         playerPanel.add(weaponLabel);
