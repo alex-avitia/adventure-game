@@ -10,7 +10,7 @@ public class UI {
     JLabel titleNameLabel, hpLabel, hpNumberLabel, weaponLabel, weaponNameLabel;
     JButton startButton, choice1, choice2, choice3, choice4;
     JTextArea mainTextArea;
-    Font titleFont = new Font("Helvetica", Font.PLAIN, 90);
+    Font titleFont = new Font("Helvetica", Font.PLAIN, 80);
     Font normalFont = new Font("Dialog", Font.PLAIN, 26);
 
     public void createUI(Game.ChoiceHandler cHandler) {
@@ -26,7 +26,7 @@ public class UI {
         titleNamePanel = new JPanel();
         titleNamePanel.setBounds(100, 100, 600, 500);
         titleNamePanel.setBackground(Color.black);
-        titleNameLabel = new JLabel("ADVENTURE");
+        titleNameLabel = new JLabel("ETERNAL");
         titleNameLabel.setForeground(Color.white);
         titleNameLabel.setFont(titleFont);
         titleNamePanel.add(titleNameLabel);
