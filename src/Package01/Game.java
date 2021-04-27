@@ -8,6 +8,7 @@ public class Game {
     ChoiceHandler cHandler = new ChoiceHandler();
     UI ui = new UI();
     VisibilityManager vm = new VisibilityManager(ui);
+    Story story = new Story(this, ui, vm);
 
     public static void main(String[] args) {
 
@@ -18,7 +19,13 @@ public class Game {
     public Game() {
 
         ui.createUI(cHandler);
+        story.defaultSetup();
+        story.secondPageNewStory();
+        vm.secondPageNewStory();
+        story.startNewStory();
+        vm.startNewStory();
         vm.showTitleScreen();
+
 
     }
 
@@ -30,7 +37,10 @@ public class Game {
 
             switch(playerChoice){
                 case "start":
-                    vm.titleToTown();
+                    vm.startNewStory();
+                    break;
+                case "continue":
+                    vm.secondPageNewStory();
                     break;
                 case "c1":
                     break;

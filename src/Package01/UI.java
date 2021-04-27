@@ -7,11 +7,11 @@ public class UI {
 
     JFrame window;
     JPanel titleNamePanel, startButtonPanel, mainTextPanel, choiceButtonPanel, playerPanel;
-    JLabel titleNameLabel, hpLabel, hpNumberLabel, weaponLabel, weaponNameLabel;
+    JLabel titleNameLabel, hpLabel, hpNumberLabel, weaponLabel;
     JButton startButton, choice1, choice2, choice3, choice4;
-    JTextArea mainTextArea;
-    Font titleFont = new Font("Helvetica", Font.PLAIN, 80);
-    Font normalFont = new Font("Dialog", Font.PLAIN, 26);
+    JTextArea mainTextArea, weaponNameLabel;
+    Font titleFont = new Font("Times New Roman", Font.PLAIN, 80);
+    Font normalFont = new Font("Times New Roman", Font.PLAIN, 26);
 
     public void createUI(Game.ChoiceHandler cHandler) {
 
@@ -45,6 +45,8 @@ public class UI {
         window.add(titleNamePanel);
         window.add(startButtonPanel);
 
+        //TODO: add continue button
+
         //GAME SCREEN
         mainTextPanel = new JPanel();
         mainTextPanel.setBounds(100, 100, 600, 250);
@@ -62,9 +64,9 @@ public class UI {
         mainTextPanel.add(mainTextArea);
 
         choiceButtonPanel = new JPanel();
-        choiceButtonPanel.setBounds(250, 350, 300, 150);
+        choiceButtonPanel.setBounds(200, 350, 400, 150);
         choiceButtonPanel.setBackground(Color.black);
-        choiceButtonPanel.setLayout(new GridLayout(4, 1));
+        choiceButtonPanel.setLayout(new GridLayout(2, 2));
         window.add(choiceButtonPanel);
 
         choice1 = new JButton("Choice 1");
@@ -101,13 +103,13 @@ public class UI {
         choiceButtonPanel.add(choice4);
 
         playerPanel = new JPanel();
-        playerPanel.setBounds(100, 15, 600, 50);
+        playerPanel.setBounds(100, 15, 600, 60);
         playerPanel.setBackground(Color.black);
         playerPanel.setForeground(Color.white);
         playerPanel.setLayout(new GridLayout(1, 4));
         window.add(playerPanel);
 
-        hpLabel = new JLabel("HP: ");
+        hpLabel = new JLabel("HP:");
         hpLabel.setFont(normalFont);
         hpLabel.setForeground(Color.white);
         playerPanel.add(hpLabel);
@@ -115,13 +117,18 @@ public class UI {
         hpNumberLabel.setForeground(Color.white);
         hpNumberLabel.setFont(normalFont);
         playerPanel.add(hpNumberLabel);
-        weaponLabel = new JLabel("Weapon: ");
+        weaponLabel = new JLabel("Weapon:");
         weaponLabel.setForeground(Color.white);
         weaponLabel.setFont(normalFont);
         playerPanel.add(weaponLabel);
-        weaponNameLabel = new JLabel();
+        weaponNameLabel = new JTextArea();
+        weaponNameLabel.setBounds(300, 15, 200, 60);
+        weaponNameLabel.setBackground(Color.black);
         weaponNameLabel.setForeground(Color.white);
         weaponNameLabel.setFont(normalFont);
+        weaponNameLabel.setLineWrap(true);
+        weaponNameLabel.setWrapStyleWord(true);
+        weaponNameLabel.setEditable(false);
         playerPanel.add(weaponNameLabel);
 
         window.setVisible(true);
