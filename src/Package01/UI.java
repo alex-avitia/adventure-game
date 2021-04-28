@@ -6,9 +6,9 @@ import javax.swing.*;
 public class UI {
 
     JFrame window;
-    JPanel titleNamePanel, startButtonPanel, mainTextPanel, choiceButtonPanel, playerPanel;
+    JPanel titleNamePanel, startButtonPanel, continueButtonPanel, mainTextPanel, choiceButtonPanel, playerPanel;
     JLabel titleNameLabel, hpLabel, hpNumberLabel, weaponLabel;
-    JButton startButton, choice1, choice2, choice3, choice4;
+    JButton startButton, continueButton, choice1, choice2, choice3, choice4;
     JTextArea mainTextArea, weaponNameLabel;
     Font titleFont = new Font("Times New Roman", Font.PLAIN, 80);
     Font normalFont = new Font("Times New Roman", Font.PLAIN, 26);
@@ -31,6 +31,21 @@ public class UI {
         titleNameLabel.setFont(titleFont);
         titleNamePanel.add(titleNameLabel);
 
+        continueButtonPanel = new JPanel();
+        continueButtonPanel.setBounds(300, 400, 200, 100);
+        continueButtonPanel.setBackground(Color.black);
+        continueButton = new JButton("CONTINUE");
+        continueButton.setBackground(Color.black);
+        continueButton.setForeground(Color.black);
+        continueButton.setFont(normalFont);
+        continueButton.setFocusPainted(false);
+        continueButton.addActionListener(cHandler);
+        continueButton.setActionCommand("continue");
+        continueButtonPanel.add(continueButton);
+        window.add(titleNamePanel);
+        window.add(continueButtonPanel);
+
+        //TODO: add continue button
         startButtonPanel = new JPanel();
         startButtonPanel.setBounds(300, 400, 200, 100);
         startButtonPanel.setBackground(Color.black);
@@ -44,8 +59,6 @@ public class UI {
         startButtonPanel.add(startButton);
         window.add(titleNamePanel);
         window.add(startButtonPanel);
-
-        //TODO: add continue button
 
         //GAME SCREEN
         mainTextPanel = new JPanel();
