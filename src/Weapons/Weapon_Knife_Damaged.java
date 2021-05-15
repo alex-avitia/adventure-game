@@ -1,4 +1,4 @@
-package package02;
+package Weapons;
 
 public class Weapon_Knife_Damaged extends SuperWeapon {
 

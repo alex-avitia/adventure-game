@@ -1,6 +1,6 @@
-package Package01;
+package MainPkg;
 
-import package02.SuperWeapon;
+import Weapons.SuperWeapon;
 
 public class Player {
 

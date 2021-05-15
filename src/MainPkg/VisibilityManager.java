@@ -1,4 +1,4 @@
-package Package01;
+package MainPkg;
 
 public class VisibilityManager {
 

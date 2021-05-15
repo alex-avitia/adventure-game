@@ -1,4 +1,4 @@
-package Package01;
+package MainPkg;
 
 import java.awt.*;
 import javax.swing.*;
@@ -26,7 +26,7 @@ public class UI {
         titleNamePanel = new JPanel();
         titleNamePanel.setBounds(100, 100, 600, 500);
         titleNamePanel.setBackground(Color.black);
-        titleNameLabel = new JLabel("ETERNAL");
+        titleNameLabel = new JLabel("ORIGIN");
         titleNameLabel.setForeground(Color.white);
         titleNameLabel.setFont(titleFont);
         titleNamePanel.add(titleNameLabel);
