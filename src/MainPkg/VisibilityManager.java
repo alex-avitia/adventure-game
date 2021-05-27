@@ -30,7 +30,7 @@ public class VisibilityManager {
         // Hide the title screen
         ui.titleNamePanel.setVisible(false);
         ui.startButtonPanel.setVisible(false);
-        // ui.continueButtonPanel.setVisible(true);
+        ui.continueButtonPanel.setVisible(true);
 
         // Show ONLY the main text panel
         ui.mainTextPanel.setVisible(true);
@@ -42,7 +42,7 @@ public class VisibilityManager {
         // Hide the title screen
         ui.titleNamePanel.setVisible(false);
         ui.startButtonPanel.setVisible(false);
-        // ui.continueButtonPanel.setVisible(true);
+        ui.continueButtonPanel.setVisible(true);
 
         // Show ONLY the main text panel
         ui.mainTextPanel.setVisible(true);
@@ -55,7 +55,7 @@ public class VisibilityManager {
         // Hide the title screen
         ui.titleNamePanel.setVisible(false);
         ui.startButtonPanel.setVisible(false);
-        // ui.continueButtonPanel.setVisible(false);
+        ui.continueButtonPanel.setVisible(false);
 
         // Show the game screen
         ui.mainTextPanel.setVisible(true);
